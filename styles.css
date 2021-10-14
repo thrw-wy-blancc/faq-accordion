@@ -81,10 +81,11 @@ hr{
     text-align: left;
     width: 70%;
     overflow: hidden;
-    max-height: 30px;
+    max-height: 35px;
 }
 .faq-title{
     font-weight: 400;
+    font-size: 17px;
     cursor: pointer;
     display: block;
 }
