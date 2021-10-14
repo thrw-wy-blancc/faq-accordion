@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Kumbh Sans", sans-serif;
+    transition: all 0.3s ease-in;
+}
+
+
+body{
+    background-image: linear-gradient(to bottom, #af67e9, #6565e7);
+    color: hsl(238, 29%, 16%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 100px;
+}
+h1{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 37%;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+.bg-container{
+    max-width: 50%;
+}
+.bg-pattern{
+    position: fixed;
+    margin-left: -600px;
+    top: -180px;
+    min-width: 60%;
+}
+.bg-pattern-m{
+    display: none;
+}
+.woman-online{
+    position: fixed;
+    margin-left: -10%;
+    min-width: 30%;
+}
+.woman-online-m{
+    display: none;
+}
+.bg-box{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: -150px;
+    transition: transform 0.5s ease-in-out;
+
+}
+.bg-box:hover{
+    transform: translateY(-10px);
+}
+hr{
+    position: relative;
+    left: 48%;
+    width: 48%;
+    color: hsl(240, 5%, 91%);
+    opacity: 0.3;
+}
+.faq-container{
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    min-height: 500px;
+    min-width: 75%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.faq{
+    position: relative;
+    left: 45%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    text-align: left;
+    width: 70%;
+    overflow: hidden;
+    max-height: 30px;
+}
+.faq-title{
+    font-weight: 400;
+    cursor: pointer;
+    display: block;
+}
+.faq-title:hover{
+    color: hsl(14, 88%, 65%);
+}
+.faq-text{
+    display: none;
+    color: hsl(240, 6%, 50%);
+}
+.faq-toggle{
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    left: 65%;
+    background-color: transparent;
+    border: none;
+    color: hsl(14, 88%, 65%);
+}
+.faq.show{
+    max-height: 100%;
+}
+.faq.show .faq-title{
+    font-weight: 700;
+}
+.faq.show .faq-text{
+    display: block;
+    width: 70%;
+    padding: 10px;
+}
+.faq.show .faq-toggle{
+    transform: rotate(180deg);
+}
+
+
+@media(max-width: 1200px){
+    body{
+        padding: 20px;
+    }
+    .faq-container{
+        min-width: 80%;
+        margin-top: 100px;
+        padding: 0;
+    }
+    .faq-toggle{
+        left: 100%;
+    }
+    .background-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .bg-pattern{
+        display: none;
+    }
+    .bg-pattern-m{
+        margin: 0;
+        display: block;
+        position: absolute;
+        top: 100px;
+    }
+    .woman-online{
+        display: none;
+    }
+    .woman-online-m{
+        margin: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+    } 
+    .bg-box{
+        display: none;
+    }
+    h1{
+        justify-content: center;
+        align-items: center;
+        margin: 75px 0 20px 0;
+    }
+    .faq{
+        transform: translateX(-50%)
+    }
+    .faq-text:active{
+        color: hsl(14, 88%, 65%);
+    }
+    hr{
+        transform: translateX(-50%);
+        width: 75%;
+    }
+}
+
+@media(max-width: 610px){
+    *{
+        text-align: left;
+        justify-content: flex-start;
+        align-items: left;
+        font-size: 16px;
+    }
+    .faq{
+        max-height: 40px;
+    }
+    .faq-text{
+        min-width: 100%;
+        padding: 10px;
+    }
+}
+
+@media(min-width: 1700px){
+    .bg-pattern{
+        min-width: 10%;
+    }
+    .woman-online{
+        min-width: 20%;
+    }
+    .bg-box{
+        margin-top: 120px;
+        margin-left: -220px;
+    }
+}
