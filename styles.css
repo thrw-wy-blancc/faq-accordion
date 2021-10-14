@@ -15,7 +15,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding: 100px;
+    padding: 40px;
     color: hsl(238, 29%, 16%);
 }
 h1{
